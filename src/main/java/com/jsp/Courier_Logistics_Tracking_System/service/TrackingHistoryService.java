@@ -95,11 +95,4 @@ public class TrackingHistoryService {
 		
 		return new ResponseEntity<>(res,HttpStatus.OK);
 	}
-	
-	
-	
-	
-
-	
-
 }

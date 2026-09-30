@@ -1,5 +1,7 @@
 package com.jsp.Courier_Logistics_Tracking_System.repository;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -23,4 +25,9 @@ public interface ShipmentRepository extends JpaRepository<Shipment,Integer> {
 
 	Optional<Shipment> findByTrackingNo(String trackingNumber);
 
+    Optional<Shipment> findByTrackingNumber(String trackingNumber);
+
+	List<Shipment> findBySourceAndDestination(String source, String destination);
+
+	List<Shipment> findByDeliveryDate(LocalDate deliveryDate);
 }
