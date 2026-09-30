@@ -4,11 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.jsp.Courier_Logistics_Tracking_System.dto.ResponseStructure;
 import com.jsp.Courier_Logistics_Tracking_System.entity.Payment;
@@ -44,6 +40,7 @@ public class PaymentController {
 	public ResponseEntity<ResponseStructure<List<Payment>>> getPaymentByPaymentMethod(@PathVariable PaymentMethod paymentMethod){
 		return paymentService.getPaymentByPaymentMethod(paymentMethod);
 	}
-	
+
+
 
 }
